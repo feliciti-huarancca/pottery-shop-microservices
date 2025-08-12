@@ -17,12 +17,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-      - name: Change working directory
-        working-directory: ./user-service
         
       - name: Install dependencies
+        working-directory: ./user-service
         run: npm install
         
       - name: Run tests
+        working-directory: ./user-service
         run: npm test
   
