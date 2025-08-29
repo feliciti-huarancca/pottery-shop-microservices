@@ -2,11 +2,12 @@
   "name": "user-service",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": { 
+  "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc",
     "dev": "nodemon --watch src --exec ts-node src/index.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:CI": "set CI=true &&react-scripts test --env=jsdom --testResultsProcessor=./node_modules/jest-html-reporter"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "@types/express": "^5.0.3",
     "@types/jest": "^30.0.0",
     "jest": "^30.0.5",
+    "jest-html-reporter": "^4.3.0",
     "nodemon": "^3.1.10",
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
