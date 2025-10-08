@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-#from app.routers import product
+from routes import product
 
-app = FastAPI()
+app = FastAPI(title="Product Service")
 
-# app.include_router(product.router)
+app.include_router(product.router, prefix="/products", tags=["Products"])
 
 @app.get("/")
 def read_root():
